@@ -1,0 +1,18 @@
+{
+  "name": "Max Wax",
+  "version": "0.1.0",
+  "devDependencies": {
+      "bootstrap": "^5.3.3",
+      "grunt": "^1.6.1",
+      "grunt-contrib-jshint": "^3.2.0",
+      "grunt-contrib-sass": "^2.0.0",
+      "grunt-contrib-uglify-es": "^3.3.0",
+      "grunt-contrib-watch": "^1.1.0",
+      "jit-grunt": "^0.10.0",
+      "sass": "^1.77.8"
+  },
+  "dependencies": {
+      "@fortawesome/fontawesome-free": "^6.7.2",
+      "grunt-file-append": "^0.0.7"
+  }
+}
