@@ -80,7 +80,7 @@ module.exports = function (grunt) {
 		uglify: {
 			my_target: {
 				files: {
-					'public/js/main.min.js': ['assets/*.js'],
+					'public/js/main.min.js': ['app/assets/*.js'],
 				}
 			}
 		},

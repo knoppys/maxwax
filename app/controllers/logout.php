@@ -13,12 +13,12 @@ class Logout extends Controller {
             'clientId' => $_ENV['AUTH0_CLIENT_ID'],
             'clientSecret' => $_ENV['AUTH0_CLIENT_SECRET'],
             'cookieSecret' => $_ENV['AUTH0_COOKIE_SECRET'],
-            'redirectUri' => 'http://mwapp.test/public/',
+            'redirectUri' => CONFIG['SITEURL'],
             'audience' => ['https://app.max-wax.co.uk']
         ]);
 
         // Finally, set up the local application session, and redirect the user to the Auth0 Universal Login Page to authenticate.
-        header("Location: " . $auth0->logout('http://mwapp.test/public/'));
+        header("Location: " . $auth0->logout(CONFIG['SITEURL'],));
         exit;
 
     }

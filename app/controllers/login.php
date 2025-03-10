@@ -9,7 +9,7 @@ class Login extends Controller {
             'clientId' => $_ENV['AUTH0_CLIENT_ID'],
             'clientSecret' => $_ENV['AUTH0_CLIENT_SECRET'],
             'cookieSecret' => $_ENV['AUTH0_COOKIE_SECRET'],
-            'redirectUri' => 'http://mwapp.test/public/callback',
+            'redirectUri' => CONFIG['SITEURL'].'/callback',
             'audience' => ['https://app.max-wax.co.uk']
         ]);
 
@@ -17,7 +17,7 @@ class Login extends Controller {
         $auth0->clear();
 
         // Finally, set up the local application session, and redirect the user to the Auth0 Universal Login Page to authenticate.
-        header("Location: " . $auth0->login('http://mwapp.test/public/callback'));
+        header("Location: " . $auth0->login(CONFIG['SITEURL'].'/callback'));
         exit;
 
     }

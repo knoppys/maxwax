@@ -19,14 +19,24 @@ body {
 	font-weight: 600;
 	font-style: normal;
 	color: #ffffff;
-	background-color: #000000;
+	background-color: #373737;
 }
 
 p, a, h1, h2, h3, h4 {
 	font-family: "DM Sans", system-ui;
 }
 
+.content {
 
+	background: rgba(59, 59, 59, 0.5);
+    border: 1px solid #BE9319;
+    padding: 2%;
+    border-top: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-bottom: 30px;
+
+}
 .home-video {
 
 	video {
@@ -111,6 +121,11 @@ p, a, h1, h2, h3, h4 {
 		font-size: 2rem;
 		color: #BE9319;
 		cursor: pointer;
+		margin: 0px 8px;
+	}
+
+	a {
+		text-decoration: none;
 	}
 
 	.text-right {
@@ -123,6 +138,15 @@ p, a, h1, h2, h3, h4 {
 	
 	.fa-house-user {
 		padding-right: 3px;
+	}
+	.inner-logo {
+
+		img{
+			max-width: 100px;
+			display: block;
+			margin: 0 auto;
+		}
+
 	}
 }
 
@@ -238,3 +262,5 @@ a.btn.btn-primary {
 	}
 	
 }
+
+

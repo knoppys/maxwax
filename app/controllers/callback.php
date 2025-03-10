@@ -9,7 +9,7 @@ class Callback extends Controller {
             'clientId' => $_ENV['AUTH0_CLIENT_ID'],
             'clientSecret' => $_ENV['AUTH0_CLIENT_SECRET'],
             'cookieSecret' => $_ENV['AUTH0_COOKIE_SECRET'],
-            'redirectUri' => 'http://mwapp.test/public',
+            'redirectUri' => CONFIG['SITEURL'],
             'audience' => ['https://bookings.max-wax.co.uk']
         ]);
 
@@ -18,7 +18,7 @@ class Callback extends Controller {
         if ($hasAuthenticated) {
             try {
                 $auth0->exchange();                
-                header("Location: http://mwapp.test/public/");
+                header('Location: '. CONFIG['SITEURL']);
                 exit;
             } catch (\Throwable $th) {
                 printf('Unable to complete authentication: %s', $th->getMessage());

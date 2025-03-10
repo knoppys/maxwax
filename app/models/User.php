@@ -2,6 +2,11 @@
 
 class User
 {
+
+    public $authUser;
+
+    public $apiUser;
+
     function __construct()
     {
 
